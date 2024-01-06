@@ -7,7 +7,7 @@ on:
 
 jobs:
   publish-to-registry:
-    name: Push Docker image to multiple registries
+    name: Build docker image and push to ghcr.io
     runs-on: ubuntu-latest
     permissions:
       packages: write
