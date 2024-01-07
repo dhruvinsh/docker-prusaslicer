@@ -37,7 +37,8 @@ RUN \
 RUN \
   echo "**** install prusaslicer from appimage ****" && \
   cd /tmp && \
-  wget "https://github.com/prusa3d/PrusaSlicer/releases/download/version_2.7.1/PrusaSlicer-2.7.1+linux-x64-GTK3-202312121425.AppImage" -O /tmp/prusa.app && \
+  URL=$(curl --silent "https://api.github.com/repos/prusa3d/PrusaSlicer/releases/latest" | grep -i "download_url.*gtk3.*appimage" | sed -E 's/.*"([^"]+)".*/\1/') && \
+  wget $URL -O /tmp/prusa.app && \
   chmod +x /tmp/prusa.app && \
   ./prusa.app --appimage-extract && \
   mv squashfs-root /opt/prusaslicer && \
