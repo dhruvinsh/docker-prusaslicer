@@ -22,14 +22,14 @@ RUN \
     gstreamer1.0-qt5 \
     gstreamer1.0-tools \
     gstreamer1.0-x \
-    libgstreamer1.0 \
     libgstreamer-plugins-bad1.0 \
     libgstreamer-plugins-base1.0 \
+    libgstreamer1.0 \
+    libgtk-3-0 \
     libwebkit2gtk-4.0-37 \
     libwx-perl \
-    libgtk-3-0 \
-    unzip \
     pcmanfm \
+    unzip \
     vim \
     wget
     
